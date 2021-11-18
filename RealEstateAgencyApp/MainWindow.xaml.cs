@@ -27,8 +27,16 @@ namespace RealEstateAgencyApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddClient addClient = new AddClient();
-            addClient.Show();
+            Client client = new Client();
+            this.Hide();
+            client.ShowDialog();
+            Show();
+        }
+
+        private void Agent(object sender, RoutedEventArgs e)
+        {
+            Agent agent = new Agent();
+            agent.Show();
             this.Close();
         }
     }

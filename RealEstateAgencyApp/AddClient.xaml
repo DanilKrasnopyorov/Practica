@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealEstateAgencyApp"
         mc:Ignorable="d"
-        Title="AddClient" Height="600" Width="1000">
+        Title="AddClient" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Rectangle Height="600"
                    Width="1000">
@@ -27,7 +27,7 @@
                 <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                 <Grid  Margin="15 20 15 0">
                     <Button HorizontalAlignment="Right" Content="Добавить" />
-                    <Button HorizontalAlignment="Left" Content="Назад" Click="back" Style="{StaticResource MaterialDesignFlatButton }"/>
+                    <Button HorizontalAlignment="Left" Content="Назад" Click="back" Style="{StaticResource MaterialDesignFlatButton }" />
                     <Rectangle Width="50" Height="50">
                     </Rectangle>
                 </Grid>

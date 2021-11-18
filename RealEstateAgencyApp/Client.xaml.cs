@@ -22,6 +22,19 @@ namespace RealEstateAgencyApp
         public Client()
         {
             InitializeComponent();
+            ClientGrid.ItemsSource = RealEstateAgencyEntities.GetContext().clients.ToList();
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            AddClient addclient = new AddClient();
+            addclient.Show();
+            this.Close();
         }
     }
 }

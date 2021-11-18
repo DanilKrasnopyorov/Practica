@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealEstateAgencyApp"
         mc:Ignorable="d"
-        Title="Client" Height="600" Width="1000">
+        Title="Client" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33"/>
@@ -40,16 +40,22 @@
                         <RowDefinition Height="180"/>
                         <RowDefinition Height="180"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="13" Padding="0 0 0 0" Margin="20,20,186,130" Height="Auto"/>
-                    <Button Grid.Column="0" Grid.Row="2" Content="Добавить" FontSize="13" Padding="0 0 0 0" Margin="100,134,100,16" Height="Auto"/>
+                    <Button Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="13" Padding="0 0 0 0" Margin="20,20,186,130" Height="Auto" Click="Back"  Style="{StaticResource MaterialDesignFlatButton }"/>
+                    <Button Grid.Column="0" Grid.Row="2" Content="Добавить" FontSize="13" Padding="0 0 0 0" Margin="100,134,100,16" Height="Auto" Click="Add"/>
                     <Button Grid.Column="1" Grid.Row="2" Content="Изменить" FontSize="13" Padding="0 0 0 0" Margin="100,132,100,16" Height="Auto"/>
                     <Button Grid.Column="2" Grid.Row="2" Content="Удалить" FontSize="13" Padding="0 0 0 0" Margin="100,132,100,16" Height="Auto"/>
-                    <TextBlock Grid.Row="0" Text="Наши клиенты" HorizontalAlignment="Center" FontSize="24" Margin="0 20 0 0 0" Grid.Column="1"/>
+                    <TextBlock Grid.Row="0" Text="Наши клиенты" HorizontalAlignment="Center" FontSize="24" Margin="0 20 0 0 " Grid.Column="1"/>
                 </Grid>
             </StackPanel>
         </Border>
-        <DataGrid Grid.Row="1" Grid.Column="1">
-            
+        <DataGrid x:Name="ClientGrid" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding MiddleName}" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+            </DataGrid.Columns>
         </DataGrid>
 
     </Grid>

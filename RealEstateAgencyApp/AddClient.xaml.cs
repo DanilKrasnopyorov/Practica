@@ -26,9 +26,14 @@ namespace RealEstateAgencyApp
 
         private void back(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Client client = new Client();
+            client.Show();
             Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

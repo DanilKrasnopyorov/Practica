@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealEstateAgencyApp"
         mc:Ignorable="d"
-        Title="Agent" Height="600" Width="1000">
+        Title="Agent" Height="600" Width="1000" WindowStartupLocation="CenterScreen" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33"/>
@@ -40,16 +40,21 @@
                         <RowDefinition Height="180"/>
                         <RowDefinition Height="180"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="13" Padding="0 0 0 0" Margin="20,20,186,130" Height="Auto"/>
-                    <Button Grid.Column="0" Grid.Row="2" Content="Добавить" FontSize="13" Padding="0 0 0 0" Margin="100,134,100,16" Height="Auto"/>
-                    <Button Grid.Column="1" Grid.Row="2" Content="Изменить" FontSize="13" Padding="0 0 0 0" Margin="100,132,100,16" Height="Auto"/>
-                    <Button Grid.Column="2" Grid.Row="2" Content="Удалить" FontSize="13" Padding="0 0 0 0" Margin="100,132,100,16" Height="Auto"/>
+                    <Button Grid.Column="0" Grid.Row="0" Content="Назад" FontSize="13" Margin="20,20,186,130" Height="Auto"  Style="{StaticResource MaterialDesignFlatButton }" Click="back"/>
+                    <Button Grid.Column="0" Grid.Row="2" Content="Добавить" FontSize="13" Margin="100,134,100,16" Height="Auto" Click="Add" />
+                    <Button Grid.Column="1" Grid.Row="2" Content="Изменить" FontSize="13" Margin="100,132,100,16" Height="Auto"/>
+                    <Button Grid.Column="2" Grid.Row="2" Content="Удалить" FontSize="13" Margin="100,132,100,16" Height="Auto" Click="delete"/>
                     <TextBlock Grid.Row="0" Text="Наши Агенты" HorizontalAlignment="Center" FontSize="24" Margin="80,20,80,130" Grid.Column="1"/>
                 </Grid>
             </StackPanel>
         </Border>
-        <DataGrid Grid.Row="1" Grid.Column="1">
-
+        <DataGrid x:Name="AgentGrid" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding MiddleName}" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="Доля в сделке" Binding="{Binding DealShare}" Width="*"/>
+            </DataGrid.Columns>
         </DataGrid>
 
     </Grid>

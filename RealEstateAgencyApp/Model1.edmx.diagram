@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="11d5b715dd984fb0b3bd15691aa6c7af" Name="Diagram1">
+        <EntityTypeShape EntityType="RealEstateAgencyModel.agents" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.apartments" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.apartments_demands" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.clients" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.deals" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.Demands" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.districts_" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.house_demands" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.houses" Width="1.5" PointX="3" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.land_demands" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.lands" Width="1.5" PointX="3" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.supplies" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstateAgencyModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_apartments_demands_agents" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_house_demands_agents" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_land_demands_agents" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_supplies_agents" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_apartments_districts_" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_apartments_demands_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_apartments_demands_Demands" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_house_demands_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_land_demands_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_supplies_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK__deals__IdDemands__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_deals_supplies" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_house_demands_Demands" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_land_demands_Demands" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_houses_districts_" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_lands_districts_" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstateAgencyModel.FK_supplies_districts_" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RealEstateAgencyApp"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AddAgent" Height="600" Width="1000">
+        Title="AddAgent" Height="600" Width="1000" WindowStartupLocation="CenterScreen" >
 
         <Grid>
             <Rectangle Height="600"
@@ -18,17 +18,17 @@
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Border Background="White" MinHeight="100" MaxHeight="300" MinWidth="200" MaxWidth="500" CornerRadius="30">
+            <Border Background="White" MinHeight="100" MaxHeight="270" MinWidth="200" MaxWidth="500" CornerRadius="30">
                 <StackPanel>
                     <TextBlock Text="Добавление агента" FontSize="24" HorizontalAlignment="Center" Margin="0 5 0 5"/>
-                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите номер телефона" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding FirstName}" />
+                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding MiddleName}"/>
+                    <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding LastName}" />
+                <TextBox Margin="10 0 10 0" materialDesign:HintAssist.Hint="Введите долю в сделке" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding DealShare}"  />
+                    
                     <Grid  Margin="15 20 15 0">
-                        <Button HorizontalAlignment="Right" Content="Добавить" />
-                        <Button HorizontalAlignment="Left" Content="Назад"  Style="{StaticResource MaterialDesignFlatButton }"/>
+                        <Button HorizontalAlignment="Right" Content="Сохранить" Click="save" />
+                        <Button HorizontalAlignment="Left" Content="Назад"  Style="{StaticResource MaterialDesignFlatButton }" Click="back" />
                         <Rectangle Width="50" Height="50">
                         </Rectangle>
                     </Grid>
